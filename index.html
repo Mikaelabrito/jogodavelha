@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -29,9 +30,16 @@
         }
 
         .tabela{
-            margin: auto;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table, th, td {
+            border: 2px solid #000;
             width: 252px;
-            height: 252px;
+            height: 86px;
         }
 
     </style>
@@ -42,36 +50,36 @@
 
         <!-- Uma função para a opção escolhida --> 
         <select name="Selecione" id="select" onclick="quemJoga()"> 
+            <option value = ""></option>
             <option value="jogador" >Jogador</option>
             <option value="computador" >Computador</option>
         </select> 
-        <!-- Uma função para cada opção 
-        <select name="Selecione" id="select"> 
-            <option value="jogador" onchange="vezdoJogador()">Jogador</option>
-            <option value="computador" onchange="vezdaCPU()">Computador</option>
-        </select> --> 
-
-
-
+       
     </div>
     <div id = "header">
         <p style = "float: left; margin-right: 10px;">Quem joga:</p>
         <img src="" border="0" height="50">
     </div>
+
     <div class="tabela">
-        <div id="a1" class="espaco" jogada="" onclick="jogar()"></div>
-        <div id="a2" class="espaco" jogada="" onclick="jogar()"></div>
-        <div id="a3" class="espaco" jogada="" onclick="jogar()"></div>
-
-        <div id="b1" class="espaco" jogada="" onclick="jogar()"></div>
-        <div id="b2" class="espaco" jogada="" onclick="jogar()"></div>
-        <div id="b3" class="espaco" jogada="" onclick="jogar()"></div>
-
-        <div id="c1" class="espaco" jogada="" onclick="jogar()"></div>
-        <div id="c2" class="espaco" jogada="" onclick="jogar()"></div>
-        <div id="c3" class="espaco" jogada="" onclick="jogar()"></div>
-
-    </div>
+    <table>
+        <tr>
+            <td class="campo" id="0" onclick="jogar()"></td>
+            <td class="campo" id="1" onclick="jogar()"></td>
+            <td class="campo" id="2" onclick="jogar()"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="3" onclick="jogar()"></td>
+            <td class="campo" id="4" onclick="jogar()"></td>
+            <td class="campo" id="5" onclick="jogar()"></td>
+        </tr>
+        <tr>
+            <td class="campo" id="6" onclick="jogar()"></td>
+            <td class="campo" id="7" onclick="jogar()"></td>
+            <td class="campo" id="8" onclick="jogar()"></td>
+        </tr>
+    </table>
+</div>
 <script type="text/javascript" src="game.js"></script>
 </body>
 </html>

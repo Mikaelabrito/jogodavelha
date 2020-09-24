@@ -15,14 +15,33 @@ function vezdoCPU(){
 }
 
 function quemJoga(){
-    if(document.getElementsByTagName("jogador" == "jogador")){
+    let player = document.getElementById("select").value;
+    if(player == "jogador"){
         vezdojogador();
-    }else if (document.getElementsByTagName("computador") == "computador"){
+    }else{
         vezdoCPU();
     }
 }
 
-quemJoga();
-inicializarEspacos();
-jogar();
-cpu();
+function inicializarEspacos(){
+    let espacos = document.getElementsByClassName("campo");
+    for(let i = 0; i < espacos.length; i++){
+        espacos[i].addEventListener("click", function(){
+
+            if (gameOver) { return;}
+            if (this.getElementsByTagName("img").length == 0){
+                if (playTime == jogador){
+                    this.innerHTML = "<img src= 'x.jpg' width= 50px;>";
+                    this.setAttribute("jogada", jogador);
+                    playTime = computador;
+                }else{
+                    this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
+                    this.setAttribute("jogada", jogador2);
+                    playTime = jogador1;
+                }
+                atualizaView();
+                verificarGanhador();
+            }
+        });
+    }
+}
