@@ -36,11 +36,10 @@ function inicializarEspacos(){
                     playTime = computador;
                 }else{
                     this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
-                    this.setAttribute("jogada", jogador2);
-                    playTime = jogador1;
+                    this.setAttribute("jogada", computador);
+                    playTime = jogador;
                 }
-                atualizaView();
-                verificarGanhador();
+                quemJoga();
             }
         });
     }
