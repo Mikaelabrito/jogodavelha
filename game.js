@@ -3,6 +3,22 @@ const computador = "O";
 let gameOver = false;
 let playTime = jogador;
 
+atualizaView();
+inicializarEspacos();
+
+function atualizaView (){
+    if (gameOver){return;}
+
+    if (playTime == jogador){
+        let jogador = document.querySelectorAll("div#header img")[0]
+        jogador.setAttribute("src", "x.jpg");
+    }else{
+        let jogador = document.querySelectorAll("div#header img")[0]
+        jogador.setAttribute("src", "circle.jpg");
+        //cpuJoga();
+    }
+}
+
 function quemJoga(){
     if (gameOver){return;}
     let player = document.getElementById("select").value;
