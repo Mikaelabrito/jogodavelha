@@ -30,7 +30,7 @@ function inicializarEspacos(){
 
             if (gameOver) { return;}
             if (this.getElementsByTagName("img").length == 0){
-                if (playTime == jogador){
+                if (player == document.getElementById("jogador")){
                     this.innerHTML = "<img src= 'x.jpg' width= 50px;>";
                     this.setAttribute("jogada", jogador);
                     playTime = computador;
