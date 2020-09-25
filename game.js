@@ -80,3 +80,4 @@ async function verificarGanhador(){
         await sleep(50);
         alert(`O jogador ${ganhador} venceu o jogo!`);
     }
+}
