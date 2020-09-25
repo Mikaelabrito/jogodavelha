@@ -30,16 +30,10 @@
         }
 
         .tabela{
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        table, th, td {
-            border: 2px solid #000;
+            margin: auto;
             width: 252px;
-            height: 86px;
+            height: 252px;
+            width: 252px;
         }
 
     </style>
@@ -62,24 +56,19 @@
     </div>
 
     <div class="tabela">
-    <table>
-        <tr>
-            <td class="campo" id="0" jogada = "" ></td>
-            <td class="campo" id="1" jogada = "" ></td>
-            <td class="campo" id="2" jogada = "" ></td>
-        </tr>
-        <tr>
-            <td class="campo" id="3" jogada = "" ></td>
-            <td class="campo" id="4" jogada = "" ></td>
-            <td class="campo" id="5" jogada = "" ></td>
-        </tr>
-        <tr>
-            <td class="campo" id="6" jogada = "" ></td>
-            <td class="campo" id="7" jogada = "" ></td>
-            <td class="campo" id="8" jogada = "" ></td>
-        </tr>
-    </table>
-</div>
+        <div id="a1" class="espaco" jogada=""></div>
+        <div id="a2" class="espaco" jogada=""></div>
+        <div id="a3" class="espaco" jogada=""></div>
+
+        <div id="b1" class="espaco" jogada=""></div>
+        <div id="b2" class="espaco" jogada=""></div>
+        <div id="b3" class="espaco" jogada=""></div>
+
+        <div id="c1" class="espaco" jogada=""></div>
+        <div id="c2" class="espaco" jogada=""></div>
+        <div id="c3" class="espaco" jogada=""></div>
+
+    </div>
 
 <input type="button" value="Mostrar/Ocultar Nome" onClick="mostrar('ma')">
 	<div id="ma" class="hidden">
