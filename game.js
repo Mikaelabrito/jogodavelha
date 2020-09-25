@@ -15,7 +15,7 @@ function mostrar(id) { //mostrar nome
 atualizaView();
 inicializarEspacos();
 
-function atualizaView() { //
+function atualizaView() { //mostra o jogador da vez "quem joga"
     if (gameOver) { return; }
 
     if (playTime == jogador) {
@@ -29,7 +29,7 @@ function atualizaView() { //
 }
 
 let player;
-function quemJoga() {
+function quemJoga() { //mostra o jogador na implementação do select
     if (gameOver) { return; }
     player = document.getElementById("select").value;
     if (player == "jogador") {
@@ -43,7 +43,7 @@ function quemJoga() {
     }
 }
 
-function cpuJoga() {
+function cpuJoga() { //função em que a cpu joga automaticamente
     console.log("oi");
     let vazio = document.getElementsByClassName("espaco");
     for (let i = 0; i < vazio.length; i++) {
@@ -60,7 +60,7 @@ function cpuJoga() {
     }
 }
 
-function inicializarEspacos() {
+function inicializarEspacos() { //mostra no tabuleiro o "x" ou "o" dos espaços clicados
     let espacos = document.getElementsByClassName("espaco");
     for (let i = 0; i < espacos.length; i++) {
         espacos[i].addEventListener("click", function () {
@@ -72,9 +72,9 @@ function inicializarEspacos() {
                     this.setAttribute("jogada", jogador);
                     player = computador;
                 } else {
-                    cpuJoga();
-                    //this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
-                    //this.setAttribute("jogada", computador); 
+                    //cpuJoga();
+                    this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
+                    this.setAttribute("jogada", computador); 
                     player = "jogador";
                 }
                 //cpuJoga();
@@ -85,7 +85,7 @@ function inicializarEspacos() {
     }
 }
 
-async function verificarGanhador() {
+async function verificarGanhador() { //verificação se houve um ganhador ou se deu velha
     let a1 = document.getElementById("0").getAttribute("jogada");
     let a2 = document.getElementById("1").getAttribute("jogada");
     let a3 = document.getElementById("2").getAttribute("jogada");
@@ -114,6 +114,6 @@ async function verificarGanhador() {
     }
 }
 
-function sleep(ms) {
+function sleep(ms) { //função para esperar o clique que definirá o vencedor
     return new Promise(resolve => setTimeout(resolve, ms));
 }
