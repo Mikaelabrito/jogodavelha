@@ -4,7 +4,7 @@ let gameOver = false;
 let playTime = jogador;
 let jogo = [];
 
-function mostrar(id) {
+function mostrar(id) { //mostrar nome
     if (document.getElementById(id).style.display == 'none') {
         document.getElementById(id).style.display = 'block';
     } else {
@@ -15,7 +15,7 @@ function mostrar(id) {
 atualizaView();
 inicializarEspacos();
 
-function atualizaView() {
+function atualizaView() { //
     if (gameOver) { return; }
 
     if (playTime == jogador) {
