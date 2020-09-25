@@ -2,6 +2,7 @@ const jogador = "X";
 const computador = "O";
 let gameOver = false;
 let playTime = jogador;
+let jogo = [];
 
 function mostrar(id) {
 	if (document.getElementById(id).style.display == 'none') {
@@ -44,16 +45,14 @@ function quemJoga(){
 
 function cpuJoga() {
     console.log("oi");
-    let l;
     let vazio = document.getElementsByClassName("espaco");
     for(let i = 0; i < vazio.length; i++){
-        l = Math.floor(Math.random() * 9);
-        vazio[i].addEventListener("  ", function(){
+        vazio[i].addEventListener("click", function(){
 
             if (gameOver) { return;}
             if (this.getElementsByTagName("img").length == 0){
-                //this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
-                //this.setAttribute("jogada", computador); 
+                this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
+                this.setAttribute("jogada", computador); 
                 playTime = jogador;
         atualizaView();
     }
@@ -73,11 +72,12 @@ function inicializarEspacos(){
                     this.setAttribute("jogada", jogador);
                     player = computador;
                 }else{ 
-                    this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
-                    this.setAttribute("jogada", computador); 
+                    cpuJoga();
+                    //this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
+                    //this.setAttribute("jogada", computador); 
                     player= "jogador"; 
                 }
-                cpuJoga();
+                //cpuJoga();
                 atualizaView();
                 verificarGanhador();
             }
