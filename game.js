@@ -3,6 +3,14 @@ const computador = "O";
 let gameOver = false;
 let playTime = jogador;
 
+function mostrar(id) {
+	if (document.getElementById(id).style.display == 'none') {
+		document.getElementById(id).style.display = 'block';
+	} else {
+		document.getElementById(id).style.display = 'none';
+	}
+}
+
 atualizaView();
 inicializarEspacos();
 
@@ -50,6 +58,7 @@ function inicializarEspacos(){
                     playTime = jogador;  
                 }
                 atualizaView();
+                verificarGanhador();
             }
         });
     }
@@ -84,10 +93,6 @@ async function verificarGanhador(){
     }
 }
 
-function mostrar(id) {
-	if (document.getElementById(id).style.display == 'none') {
-		document.getElementById(id).style.display = 'block';
-	} else {
-		document.getElementById(id).style.display = 'none';
-	}
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
