@@ -50,7 +50,7 @@
 
         <!-- Uma função para a opção escolhida --> 
         <select name="Selecione" id="select" onclick="quemJoga()"> 
-            <option value = ""></option>
+            <option value = "">Selecione</option>
             <option value="jogador" >Jogador</option>
             <option value="computador" >Computador</option>
         </select> 
@@ -80,6 +80,12 @@
         </tr>
     </table>
 </div>
+
+<input type="button" value="Mostrar/Ocultar Nome" onClick="mostrar('ma')">
+	<div id="ma" class="hidden">
+		<h3>Mikaela Brito</h3>
+	</div>
+
 <script type="text/javascript" src="game.js"></script>
 </body>
 </html>
