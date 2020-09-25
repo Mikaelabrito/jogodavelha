@@ -27,9 +27,10 @@ function atualizaView (){
     }
 }
 
+let player;
 function quemJoga(){
     if (gameOver){return;}
-    let player = document.getElementById("select").value;
+    player = document.getElementById("select").value;
     if(player == "jogador"){
         playTime = document.getElementsByTagName("jogador");
         playTime = document.querySelectorAll("div#header img")[0];
@@ -48,14 +49,14 @@ function inicializarEspacos(){
 
             if (gameOver) { return;}
             if (this.getElementsByTagName("img").length == 0){
-                if (playTime == jogador){
+                if (player == "jogador"){
                     this.innerHTML = "<img src= 'x.jpg' width= 50px;>";
                     this.setAttribute("jogada", jogador);
-                    playTime = computador;
+                    player = computador;
                 }else{
                     this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
                     this.setAttribute("jogada", computador); 
-                    playTime = jogador;  
+                    player= "jogador";  
                 }
                 atualizaView();
                 verificarGanhador();
