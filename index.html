@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Jogo da velha</title>
     <style type="text/css">
+        .hidden{
+            margin: auto;
+            margin-top: 20px;
+            width: 252px;
+            height: 20px;
+        }
+
         #selecione {
             margin: auto;
             margin-top: 10px;
@@ -37,6 +44,10 @@
 </head>
 
 <body>
+    <div id="tbl" class="hidden">
+        <input type="button" value="Mostrar/Ocultar" onClick="mostrar('tb')">
+    </div>
+
     <div id="selecione">
         <p style="float: left; margin-right: 10px;">Selecione quem começa:</p>
 
@@ -53,7 +64,7 @@
         <img src="" border="0" height="50">
     </div>
 
-    <div class="tabela">
+    <div id="tb" class="tabela">
         <div id="0" class="espaco" jogada=""></div>
         <div id="1" class="espaco" jogada=""></div>
         <div id="2" class="espaco" jogada=""></div>
@@ -67,12 +78,6 @@
         <div id="8" class="espaco" jogada=""></div>
 
     </div>
-
-    <input type="button" value="Mostrar/Ocultar Nome" onClick="mostrar('ma')">
-    <div id="ma" class="hidden">
-        <h3>Mikaela Brito</h3>
-    </div>
-
     <script type="text/javascript" src="game.js"></script>
 </body>
 
