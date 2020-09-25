@@ -19,11 +19,11 @@ function atualizaView() { //mostra o jogador da vez "quem joga"
     if (gameOver) { return; }
 
     if (playTime == jogador) {
-        let jogador = document.querySelectorAll("div#header img")[0]
-        jogador.setAttribute("src", "x.jpg");
+        let joga = document.querySelectorAll("div#header img")[0]
+        joga.setAttribute("src", "x.jpg");
     } else {
-        let jogador = document.querySelectorAll("div#header img")[0]
-        jogador.setAttribute("src", "circle.jpg");
+        let joga = document.querySelectorAll("div#header img")[0]
+        joga.setAttribute("src", "circle.jpg");
         //cpuJoga();
     }
 }
@@ -36,6 +36,7 @@ function quemJoga() { //mostra o jogador na implementação do select
         playTime = document.getElementsByTagName("jogador");
         playTime = document.querySelectorAll("div#header img")[0];
         playTime.setAttribute("src", "x.jpg");
+        playTime = computador;
     } else {
         playTime = document.getElementsByTagName("computador");
         playTime = document.querySelectorAll("div#header img")[0];
@@ -70,7 +71,7 @@ function inicializarEspacos() { //mostra no tabuleiro o "x" ou "o" dos espaços 
                 if (player == "jogador") {
                     this.innerHTML = "<img src= 'x.jpg' width= 50px;>";
                     this.setAttribute("jogada", jogador);
-                    player = computador;
+                    player = "computador";
                 } else {
                     //cpuJoga();
                     this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
@@ -79,8 +80,8 @@ function inicializarEspacos() { //mostra no tabuleiro o "x" ou "o" dos espaços 
                 }
                 //cpuJoga();
                 atualizaView();
-                verificarGanhador();
             }
+            verificarGanhador();
         });
     }
 }
