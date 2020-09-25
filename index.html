@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>Jogo da velha</title>
     <style type="text/css">
-
-        
-        #selecione{
+        #selecione {
             margin: auto;
             margin-top: 10px;
             width: 252px;
             height: 40px;
         }
-        
-        #header{
+
+        #header {
             margin: auto;
             margin-top: 40px;
             width: 252px;
             height: 80px;
         }
 
-        .espaco{
+        .espaco {
             width: 80px;
             height: 60px;
             border: 2px solid #000;
@@ -29,29 +27,29 @@
             padding-top: 15px;
         }
 
-        .tabela{
+        .tabela {
             margin: auto;
             width: 252px;
             height: 252px;
             width: 252px;
         }
-
     </style>
 </head>
-<body>
-    <div id = "selecione">
-        <p style = "float: left; margin-right: 10px;">Selecione quem começa:</p>
 
-        <!-- Uma função para a opção escolhida --> 
-        <select name="Selecione" id="select" onclick="quemJoga()"> 
-            <option value = "">Selecione</option>
-            <option value="jogador" >Jogador</option>
-            <option value="computador" >Computador</option>
-        </select> 
-       
+<body>
+    <div id="selecione">
+        <p style="float: left; margin-right: 10px;">Selecione quem começa:</p>
+
+        <!-- Uma função para a opção escolhida -->
+        <select name="Selecione" id="select" onclick="quemJoga()">
+            <option value="">Selecione</option>
+            <option value="jogador">Jogador</option>
+            <option value="computador">Computador</option>
+        </select>
+
     </div>
-    <div id = "header">
-        <p style = "float: left; margin-right: 10px;">Quem joga:</p>
+    <div id="header">
+        <p style="float: left; margin-right: 10px;">Quem joga:</p>
         <img src="" border="0" height="50">
     </div>
 
@@ -70,11 +68,12 @@
 
     </div>
 
-<input type="button" value="Mostrar/Ocultar Nome" onClick="mostrar('ma')">
-	<div id="ma" class="hidden">
-		<h3>Mikaela Brito</h3>
-	</div>
+    <input type="button" value="Mostrar/Ocultar Nome" onClick="mostrar('ma')">
+    <div id="ma" class="hidden">
+        <h3>Mikaela Brito</h3>
+    </div>
 
-<script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="game.js"></script>
 </body>
+
 </html>
