@@ -45,14 +45,6 @@ function inicializarEspacos(){
     }
 }
 
-function mostrar(id) {
-	if (document.getElementById(id).style.display == 'none') {
-		document.getElementById(id).style.display = 'block';
-	} else {
-		document.getElementById(id).style.display = 'none';
-	}
-}
-
 async function verificarGanhador(){
     let a1 = document.getElementById("0").getAttribute("jogada");
     let a2 = document.getElementById("1").getAttribute("jogada");
@@ -80,4 +72,12 @@ async function verificarGanhador(){
         await sleep(50);
         alert(`O jogador ${ganhador} venceu o jogo!`);
     }
+}
+
+function mostrar(id) {
+	if (document.getElementById(id).style.display == 'none') {
+		document.getElementById(id).style.display = 'block';
+	} else {
+		document.getElementById(id).style.display = 'none';
+	}
 }
