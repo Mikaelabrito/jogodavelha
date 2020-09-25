@@ -42,20 +42,24 @@ function quemJoga(){
     }
 }
 
-/*function cpuJoga() {
+function cpuJoga() {
     console.log("oi");
-        let l;
-        let c;
-        do{
-            l = Math.floor(Math.random() * 2);
-            c = Math.floor(Math.random() * 2);
-        }while(document.getElementById = "campo"!="");
-        this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
-        this.setAttribute("jogada", jogador2); 
-        playTime = jogador1;
-        //gameOver != false
+    let l;
+    let vazio = document.getElementsByClassName("espaco");
+    for(let i = 0; i < vazio.length; i++){
+        l = Math.floor(Math.random() * 9);
+        vazio[i].addEventListener("  ", function(){
+
+            if (gameOver) { return;}
+            if (this.getElementsByTagName("img").length == 0){
+                //this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
+                //this.setAttribute("jogada", computador); 
+                playTime = jogador;
         atualizaView();
-    }*/
+    }
+});
+}
+}
 
 function inicializarEspacos(){
     let espacos = document.getElementsByClassName("espaco");
@@ -68,11 +72,12 @@ function inicializarEspacos(){
                     this.innerHTML = "<img src= 'x.jpg' width= 50px;>";
                     this.setAttribute("jogada", jogador);
                     player = computador;
-                }else{
+                }else{ 
                     this.innerHTML = "<img src= 'circle.jpg' width= 50px;>";
                     this.setAttribute("jogada", computador); 
-                    player= "jogador";  
+                    player= "jogador"; 
                 }
+                cpuJoga();
                 atualizaView();
                 verificarGanhador();
             }
